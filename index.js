@@ -15,11 +15,11 @@ const connectDB = require('./config/db');
 connectDB ();
 
 // Cors
-// const corsOptions = {
-//     origin: process.env.ALLOWED_CLIENTS.split(',')
-// }
-// app.use(cors(corsOptions));
-
+const corsOptions = {
+  origin: process.env.ALLOWED_CLIENTS.split(',')
+  // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
+}
+app.use(cors(corsOptions));
 
 // Template engine
 app.set('views' , path.join(__dirname,'/views'));
