@@ -15,10 +15,10 @@ const connectDB = require('./config/db');
 connectDB ();
 
 // Cors
-const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
-}
-app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: process.env.ALLOWED_CLIENTS.split(',')
+// }
+// app.use(cors(corsOptions));
 
 
 // Template engine
